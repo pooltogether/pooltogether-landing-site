@@ -19,6 +19,26 @@ export const Nav = (props) => {
       className='justify-end items-center hidden sm:flex w-2/3'
     >
       <Link
+        href='https://www.notion.so/PoolTogether-Knowledge-Base-fa721ccefa3242eaabd125a8415acd27'
+        as='https://www.notion.so/PoolTogether-Knowledge-Base-fa721ccefa3242eaabd125a8415acd27'
+        shallow
+      >
+        <a
+          target='_blank'
+          className={classnames(
+            'mr-3',
+            navLinkClasses,
+            {
+              'text-white hover:text-highlight-2': !developersPage,
+              'text-highlight-2 hover:text-highlight-2': developersPage
+            }
+          )}
+        >
+          {t('knowledge base')}
+        </a>
+      </Link>
+
+      <Link
         href='/developers'
         as='/developers'
         shallow
@@ -52,5 +72,5 @@ export const Nav = (props) => {
       </Link>
     </nav>
   </>
-    
+
 }
